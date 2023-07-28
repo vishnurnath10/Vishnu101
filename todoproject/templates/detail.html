@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>detail-demo</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+ <div class="shadow card">
+                <div class="card-body">
+                    <h5 class="card-title">{{tsk.name}}</h5>
+
+                      <p><b>{{tsk.priority}}</b></p>
+                     <p><b>{{tsk.date}}</b></p>
+                    <a class="btn btn-danger" href="{% url 'delete' tsk.id %}">Done</a>
+                    <a class="btn btn-success" href="{% url 'update' tsk.id %}">Update</a>
+
+                </div>
+
+            </div>
+{% endblock %}
+</body>
+</html>
